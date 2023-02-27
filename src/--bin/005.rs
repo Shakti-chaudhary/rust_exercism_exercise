@@ -17,7 +17,6 @@ pub fn sublist<T: PartialEq>(_first_list: &[T], _second_list: &[T]) -> Compariso
         && _second_list
             .windows(_first_list.len())
             .any(|x| x == _first_list)
-        || _first_list.is_empty()
     {
         Comparison::Sublist
     } else if _first_list.len() > _second_list.len()
